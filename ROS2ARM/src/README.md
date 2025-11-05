@@ -4,8 +4,6 @@ colcon build
 source install/setup.bash
 
 run urdf:
-source ~/.bashrc
-ros2 launch urdf_tutorial display.launch.py model:=/home/wzk/ARM/src/arm_description/urdf/arm.urdf
 ros2 launch urdf_tutorial display.launch.py model:=/home/wzk/ROS2ARM/src/arm_description/urdf/arm.urdf
 
 launch by main xacro:
@@ -36,7 +34,7 @@ ros2 topic pub -1 /joint_command example_interfaces/msg/Float64MultiArray "{data
 
 Pose Goal Control:
 ros2 topic pub -1 /pose_command arm_interface/msg/PoseCommand "{x: 0.391407, y: -0.000063, z: 0.226419, ox: 0.017067, oy: 0.706935, oz: 0.016974, ow: 0.706869}"
-
+Zero state pose:
 Position: [0.39137, -4.21521e-05, 0.22646]
 Orientation: [0.0172663, 0.706912, 0.0172053, 0.706881]
 
